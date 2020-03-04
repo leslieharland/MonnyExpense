@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="functions"
+        android:singleLineTitle="false"
+        android:title="@string/functions">
+        <!-- A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked. -->
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="passcode"
+            android:title="@string/passcode" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="notification"
+            android:title="@string/notification" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="sound"
+            android:title="@string/sound" />
+    </PreferenceCategory>
+</PreferenceScreen>

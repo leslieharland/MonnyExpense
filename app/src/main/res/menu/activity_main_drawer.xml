@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_recurring"
+            android:icon="@drawable/ic_recurring"
+            android:title="Recurring" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account_balance"
+            android:title="Account Book" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_label"
+            android:title="Category" />
+    </group>
+
+    <item android:title="Report">
+        <menu>
+            <item
+                android:id="@+id/nav_report"
+                android:icon="@drawable/ic_report"
+                android:title="Report" />
+            <item
+                android:id="@+id/nav_chart"
+                android:icon="@drawable/ic_pie_chart"
+                android:title="Pie Chart" />
+            <item
+                android:id="@+id/nav_topten"
+                android:icon="@drawable/ic_topten"
+                android:title="Top Expenses" />
+            <item
+                android:id="@+id/nav_trend"
+                android:icon="@drawable/ic_show_chart"
+                android:title="Trend" />
+        </menu>
+    </item>
+    <item android:title="Data">
+        <menu>
+
+            <item
+                android:id="@+id/nav_backup"
+                android:icon="@drawable/ic_import_export"
+                android:title="Backup" />
+        </menu>
+    </item>
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="Setting" />
+        </menu>
+    </item>
+</menu>

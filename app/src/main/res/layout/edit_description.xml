@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/edit_toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/standard_half_margin"
+        android:background="@drawable/button_border"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/simple_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:minHeight="80dp"
+                    android:padding="@dimen/standard_half_padding"
+                    android:textAlignment="viewStart">
+
+                    <requestFocus />
+                </EditText>
+
+                <RelativeLayout
+                    android:id="@+id/llDescriptionContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edtDescription"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="48dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtDescription">
+
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:contentDescription="@string/no_image"
+                        android:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/btnRemoveImage"
+                        android:layout_width="30dp"
+                        android:layout_height="45dp"
+                        android:layout_alignLeft="@id/ivImage"
+                        android:layout_alignStart="@id/ivImage"
+                        android:layout_alignTop="@+id/ivImage"
+                        android:baselineAlignBottom="false"
+                        android:contentDescription="@string/empty"
+                        android:cropToPadding="false"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_close" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/rounded_bottom"
+            android:drawableLeft="@drawable/ic_menu_camera"
+            android:drawablePadding="@dimen/standard_half_padding"
+            android:drawableStart="@drawable/ic_menu_camera"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/standard_half_padding"
+            android:paddingStart="@dimen/standard_half_padding"
+            android:text="@string/add_photo"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

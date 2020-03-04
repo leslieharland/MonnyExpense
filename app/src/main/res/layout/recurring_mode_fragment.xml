@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:minHeight="100dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llRecurringDates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:background="@drawable/button_border"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/std_padding"
+        android:paddingRight="@dimen/std_padding"
+        android:showDividers="end"
+        android:divider="@color/md_divider_black"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/md_transparent"
+                android:contentDescription="@string/date_label"
+                android:text="@string/recurring_mode"
+                android:textSize="@dimen/text_normal_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="25dp" />
+            <TextView
+                android:id="@+id/txtViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/md_transparent"
+                android:contentDescription="@string/date_label"
+                android:gravity="end"
+                android:text="@string/monthly"
+                android:textAlignment="viewEnd"
+                android:textSize="@dimen/large_text_size"
+                android:textColor="@color/monny_default"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            style="@style/divider_horizontal"
+            android:layout_marginTop="@dimen/standard_half_margin"
+            android:layout_marginBottom="@dimen/standard_half_margin"
+            android:visibility="visible" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dateFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/md_transparent"
+                android:contentDescription="@string/date_label"
+                android:text="@string/dateDisplayFormat2"
+                android:textSize="@dimen/text_normal_size" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_arrow_forward" />
+
+            <TextView
+                android:id="@+id/dateTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/md_transparent"
+                android:contentDescription="@string/dateDisplayFormat2"
+                android:gravity="end"
+                android:text="@string/dateDisplayFormat2"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/monny_default"
+                android:textSize="@dimen/text_normal_size" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

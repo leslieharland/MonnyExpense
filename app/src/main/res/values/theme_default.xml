@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeDefault" parent="ThemeDefaultBase"/>
+    <!-- Base application theme. -->
+    <style name="ThemeDefaultBase" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+
+
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/material_grey_500</item>
+
+        <!-- Buttons -->
+        <item name="android:buttonStyle">@style/Monny.Button</item>
+        <item name="android:textColorPrimary">@color/colorGray</item>
+        <item name="android:textColorSecondary">@color/colorGray</item>
+        <item name="android:textAllCaps">false</item>
+
+        <item name="android:windowBackground">@color/material_grey_50</item>
+        <item name="android:windowContentOverlay">@drawable/divider_horizontal</item>
+        <item name="android:windowActionBarOverlay">false</item>
+    </style>
+
+    <!-- Activities -->
+    <style name="ExpenseEditActivity" parent="ThemeDefault"/>
+
+    <style name="BaseActivity" parent="ThemeDefault">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="DescriptionActivity" parent="ThemeDefault"/>
+
+
+    <style name="Monny.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/monny_green</item>
+        <!--<item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>-->
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textColor">@color/material_red_400</item>
+    </style>
+
+    <!-- Widgets -->
+    <style name="PopupMenu" parent="Base.Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/rounded_border</item>
+        <item name="android:dropDownVerticalOffset">@dimen/popup_menu_vertical_offset</item>
+        <item name="android:dropDownHorizontalOffset">@dimen/popup_menu_horizontal_offset</item>
+    </style>
+
+    <!-- Toolbars -->
+    <style name="ToolbarBase" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:foregroundGravity">center_vertical</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/custom_background_bar</item>
+    </style>
+
+    <style name="Toolbar" parent="ToolbarBase" />
+
+    <style name="ToolbarIcon">
+        <item name="android:background">@drawable/click_indicator_light</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:maxWidth">48dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#282828</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <style name="ToolbarIconBackButton" parent="ToolbarIcon">
+        <item name="android:drawableStart">@mipmap/ic_arrow_left</item>
+        <item name="android:focusable">true</item>
+        <item name="android:contentDescription">Navigate Back</item>
+    </style>
+
+    <style name="ToolbarTitleBase" parent="Headline">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:color">#282828</item>
+        <item name="android:textColorHint">#282828</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="ToolbarTitleBase" />
+
+    <style name="ToolbarVectorIcon">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:background">@drawable/click_indicator_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <!-- Popup menus -->
+    <dimen name="popup_menu_horizontal_offset">-151dp</dimen>
+    <dimen name="popup_menu_vertical_offset">-46dp</dimen>
+
+    <style name="ThemeDefault.NotFullScreen">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    <style name="ThemeDefault.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="ThemeDefault.AppBarOverlay" parent="ThemeDefault.NoActionBar" />
+
+    <style name="ThemeDefault.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Typography -->
+    <style name="TextPrimary">
+        <item name="android:textColor">#282828</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="Headline" parent="TextPrimary">
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+</resources>

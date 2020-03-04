@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.leslie.monnyfree">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <application
+        android:name=".MonnyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:fullBackupContent="false"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/Theme.Custom" />
+        <activity
+            android:name=".ExpenseEditActivity"
+            android:label="@string/add_expense_activity"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean"
+            android:theme="@style/ExpenseEditActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExpenseItemActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.INSERT" />
+                <action android:name="com.example.leslie.monnyfree.custom.intent.action.RECURRING_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DescriptionActivity"
+            android:label="@string/description"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ExpenseEditActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/DescriptionActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExpenseEditActivity" />
+        </activity>
+        <activity
+            android:name=".CategoryActivity"
+            android:theme="@style/ThemeDefault" />
+        <activity android:name=".RecurringTransactionsActivity" />
+        <activity
+            android:name=".ExpenseItemActivity"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".AccountActivity"
+            android:label="@string/account_activity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ExpenseEditActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExpenseItemActivity" />
+        </activity>
+        <activity android:name=".EditAccountActivity" />
+
+
+        <provider
+            android:name=".MonnyContentProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="true" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities" />
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/picker_provider_paths" />
+    </application>
+
+</manifest>

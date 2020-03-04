@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/rounded_rectangle_layout"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+    <!--    android:layout_height="?android:attr/listPreferredItemHeight"-->
+    <RelativeLayout
+        android:id="@+id/group_indicator"
+        android:layout_width="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/expandable_list_indicator"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/empty" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/indent"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/list_item_image"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/empty"
+        android:visibility="gone" />
+    <!-- text -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:mode="twoLine"
+        android:orientation="vertical"
+        android:paddingBottom="2dip"
+        android:paddingLeft="4dp"
+        android:paddingStart="4dp"
+        android:paddingTop="2dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_half_margin"
+            android:layout_marginRight="@dimen/standard_half_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@android:id/text1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/date"
+                android:layout_marginLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_normal_size" />
+            <!--android:layout_marginTop="6dip" -->
+            <TextView
+                android:id="@android:id/text2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/no_amount"
+                android:textAlignment="viewEnd"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_normal_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- selector -->
+    <LinearLayout
+        android:id="@+id/selector"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+</LinearLayout>

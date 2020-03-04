@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/llDate"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/button_height"
+    android:layout_marginTop="@dimen/standard_margin"
+    android:background="@drawable/button_border"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/std_padding"
+    android:paddingRight="@dimen/std_padding"
+    android:weightSum="100"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/txtLabelDate"
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        android:gravity="center_vertical"
+        android:text="@string/date_label"
+        android:textSize="@dimen/text_normal_size" />
+
+    <View
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="40" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/today"
+            android:textSize="@dimen/large_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

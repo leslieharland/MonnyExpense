@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/std_padding"
+    android:weightSum="100">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_half_margin"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="30dp"
+            android:layout_height="34dp"
+            android:layout_gravity="start"
+            app:srcCompat="@drawable/ic_close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_margin="@dimen/standard_quarter_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_monthly_budget"
+                android:textSize="@dimen/text_dialog"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:background="@drawable/rounded_border_dotted_red">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/textViewBudgetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:text="@string/no_budget_records"
+            android:textColor="@color/monny_default"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:id="@+id/textViewPreviousBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewBudgetText"
+            android:layout_alignStart="@+id/textViewBudgetText"
+            android:layout_below="@+id/textViewBudgetText"
+            android:text="@string/prev_b"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:id="@+id/textViewPreviousBudgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textViewBudgetText"
+            android:layout_alignRight="@+id/textViewBudgetText"
+            android:layout_below="@+id/textViewBudgetText"
+            android:text="@string/no_amount" />
+
+        <TextView
+            android:id="@+id/textViewPreviousExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewPreviousBudget"
+            android:layout_alignStart="@+id/textViewPreviousBudget"
+            android:layout_below="@+id/textViewPreviousBudget"
+            android:text="@string/prev_exp"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:id="@+id/textViewPreviousExpensesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewPreviousExpenses"
+            android:layout_alignLeft="@+id/textViewPreviousBudgetAmount"
+            android:layout_alignStart="@+id/textViewPreviousBudgetAmount"
+            android:text="@string/no_amount" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/default_date"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/current_expense_no_data"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/rounded_border"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/inputBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="85"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/input_budget"
+            android:inputType="number"
+            android:paddingHorizontal="@dimen/standard_half_padding"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryLight"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/standard_half_margin"
+            android:layout_marginRight="@dimen/standard_half_margin"
+            android:layout_weight="15"
+            app:srcCompat="@drawable/ic_edit_red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/std_padding"
+        android:layout_weight="20"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGiveup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_light"
+            android:text="@string/give_up"
+            android:textColor="@color/white"
+            tools:textAllCaps="false" />
+
+        <View
+            android:layout_width="@dimen/standard_half_margin"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            tools:textAllCaps="false" />
+    </LinearLayout>
+
+</LinearLayout>

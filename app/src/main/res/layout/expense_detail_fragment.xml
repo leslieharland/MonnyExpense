@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/button_height"
+            android:divider="@drawable/divider_horizontal"
+            android:scrollbars="vertical"
+            android:orientation="vertical"
+            android:fillViewport="true"
+            android:showDividers="end">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_half_margin"
+                android:background="@drawable/rounded_border_no_stroke"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_half_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/standard_half_padding">
+
+                    <TextView
+                        android:id="@+id/lblAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/amount"
+                        android:text="@string/amount_lbl"
+                        android:textColor="@color/monny_default"
+                        android:textSize="@dimen/text_dialog"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtViewAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/amount"
+                        android:gravity="end"
+                        android:text="@string/no_amount"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/monny_default"
+                        android:textSize="@dimen/text_dialog"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/standard_half_padding">
+
+                    <TextView
+                        android:id="@+id/lblCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/category"
+                        android:text="@string/category_lbl"
+                        android:textSize="@dimen/text_dialog" />
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/add_a_photo"
+                        app:srcCompat="@null" />
+
+                    <TextView
+                        android:id="@+id/txtViewCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/category"
+                        android:gravity="end"
+                        android:text="@string/default_category_text"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/monny_default"
+                        android:textSize="@dimen/text_dialog" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/standard_half_padding"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/lblDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/date_label"
+                        android:text="@string/date_lbl"
+                        android:textSize="@dimen/text_dialog" />
+
+                    <TextView
+                        android:id="@+id/txtViewDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/date_label"
+                        android:gravity="end"
+                        android:text="@string/today"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/monny_default"
+                        android:textSize="@dimen/text_dialog" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="@dimen/standard_half_padding">
+
+
+                    <TextView
+                        android:id="@+id/lblDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/description"
+                        android:text="@string/description_lbl"
+                        android:textSize="@dimen/text_dialog" />
+
+                    <TextView
+                        android:id="@+id/txtViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/md_transparent"
+                        android:contentDescription="@string/date_label"
+                        android:gravity="start"
+                        android:text="@string/empty"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/text_dialog" />
+
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/add_a_photo"
+                        android:minHeight="100dp"
+                        android:minWidth="100dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_half_margin"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_default_red"
+            android:text="@string/Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_dialog"
+            android:textStyle="bold" />
+    </FrameLayout>
+</LinearLayout>

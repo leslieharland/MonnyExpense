@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    https://stackoverflow.com/questions/47159758/horizontal-progress-bar-with-icon-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent">
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <size
+                    android:width="12dp"
+                    android:height="12dp" />
+                <padding android:right="10dp"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

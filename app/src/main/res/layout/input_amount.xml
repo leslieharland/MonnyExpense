@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:background="@color/colorPrimary"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/zero"
+    android:orientation="vertical"
+    app:layout_behavior="com.example.leslie.monnyfree.view.behaviors.AutoCloseBottomSheetBehavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyClear"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/clear" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyLeftParenthesis"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="("
+                    android:visibility="invisible" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyRightParenthesis"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text=")"
+                    android:visibility="invisible" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyDiv"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/operator_divide" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/standard_quarter_margin"
+                android:orientation="horizontal">
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum7"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="7" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum8"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="8" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum9"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="9" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyMultiplication"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/operator_multiply" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/standard_quarter_margin"
+                android:orientation="horizontal">
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum4"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="4" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum5"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="5" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum6"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="6" />
+
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyLess"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/operator_subtract" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/standard_quarter_margin"
+                android:orientation="horizontal">
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum1"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="1" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum2"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="2" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum3"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="3" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyAdd"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/operator_add" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/standard_quarter_margin"
+                android:orientation="horizontal">
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNumDecimal"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="." />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyNum0"
+                    style="@style/Money.Button.Input.Dialog"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="0" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/deleteButton"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/ic_erase"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_dialog" />
+
+                <com.example.leslie.monnyfree.view.CalculatorButton
+                    android:id="@+id/buttonKeyEqual"
+                    style="@style/Money.Button.Input.Dialog.Operator"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/opeator_equals" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
